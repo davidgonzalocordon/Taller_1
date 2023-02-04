@@ -22,12 +22,14 @@ public class Taller_1 {
 
             System.out.print("Por favor escoger la opción que desea ver: ");
             Seleccion_Punto = lector.nextInt();
-
+            
             boolean repite_seleccion_punto = true;
+            Boolean repite_seleccion_bucle = true;
             do {
                 if (Seleccion_Punto <= 5 & Seleccion_Punto >= 1) {
                     switch (Seleccion_Punto) {
                         case 1:
+
                             System.out.println("");
                             System.out.println(
                                     "1) Dado dos números aleatorios entre el 1 al 2023, imprimir la tabla de multiplicar donde A es el numero del que se tiene que hacer la tabla y B es asta el multiplicador que debe llegar.");
@@ -37,6 +39,13 @@ public class Taller_1 {
                             multiplicado = numA.nextInt(2023) + 1;
                             multiplicador = numA.nextInt(2023) + 1;
                             int contador = 0;
+                            int[] productos = new int[multiplicador + 1];
+
+                            for (contador = 0; contador <= multiplicador; contador++) {
+                                producto = multiplicado * contador;
+                                productos[contador] = producto;
+                            }
+
                             System.out.println(" los números que salieron son: ");
                             System.out.println("multiplicado = " + multiplicado);
                             System.out
@@ -50,90 +59,107 @@ public class Taller_1 {
                             System.out.println("4) for each");
                             System.out.print("coloque el numero de la opción que va a escoger: ");
                             int Seleccion_bucle = lector.nextInt();
-                            Boolean repite_seleccion_bucle = true;
+                            System.out.println("");
 
                             do {
                                 if (Seleccion_bucle <= 4 & Seleccion_bucle >= 1) {
                                     switch (Seleccion_bucle) {
-                                        case 1:
+                                        case 1: //do while
                                             contador = 0;
                                             do {
-                                                producto = multiplicado * contador;
-                                                System.out.println(multiplicado + "*" + contador + "=" + producto);
+                                                System.out.println(
+                                                        multiplicado + "*" + contador + "=" + productos[contador]);
                                                 contador = contador + 1;
                                             } while (contador <= multiplicador);
+                                            System.out.println("do while");
 
                                             System.out.println("");
                                             System.out.println("desea escoger otro bucle? ");
                                             System.out.println("1) si 2) no ");
                                             Seleccion_bucle = lector.nextInt();
-
-                                            if (Seleccion_bucle <= 2 & Seleccion_bucle >= 1) {
-                                                if (Seleccion_bucle == 1) {
-                                                    System.out.println("");
-                                                    System.out.println(
-                                                            "porfa escoja con cual bucle desea ver las multiplicaciones: ");
-                                                    System.out.println("1) repetir do-while");
-                                                    System.out.println("2) while");
-                                                    System.out.println("3) for");
-                                                    System.out.println("4) for each");
-                                                    System.out
-                                                            .print("coloque el numero de la opción que va a escoger: ");
-                                                    Seleccion_bucle = lector.nextInt();
-                                                    repite_seleccion_bucle = true;
+                                            
+                                            do {
+                                                if (Seleccion_bucle <= 2 & Seleccion_bucle >= 1) {
+                                                    if (Seleccion_bucle == 1) {
+                                                        System.out.println("");
+                                                        System.out.println(
+                                                                "porfa escoja con cual bucle desea ver las multiplicaciones: ");
+                                                        System.out.println("1) do-while");
+                                                        System.out.println("2) repetir while");
+                                                        System.out.println("3) for");
+                                                        System.out.println("4) for each");
+                                                        System.out
+                                                                .print("coloque el numero de la opción que va a escoger: ");
+                                                        Seleccion_bucle = lector.nextInt();
+                                                        repite_seleccion_bucle = true;
+                                                    } else {
+                                                        System.out.println(
+                                                                "okey muchas gracias por haver visto este punto");
+                                                        repite_seleccion_bucle = false;
+                                                        repite_seleccion_punto=true;
+                                                    }
                                                 } else {
+                                                    System.out.println("porfavor escoja entre las opciones dadas: ");
+                                                    System.out.println("1) si 2) no ");
+                                                    Seleccion_bucle = lector.nextInt();
                                                     repite_seleccion_bucle = false;
+                                                    repite_seleccion_punto=true; 
                                                 }
-                                            } else {
-                                                System.out.println("porfavor escoja entre las opciones dadas: ");
-                                                System.out.println("1) si 2) no ");
-                                                Seleccion_bucle = lector.nextInt();
-                                                repite_seleccion_bucle = false;
-                                            }
+                                            } while (repite_seleccion_bucle == false);
 
                                             break;
-                                        case 2:
+                                        case 2: //while
                                             contador = 0;
-                                            while (contador <= multiplicador) {
-                                                producto = multiplicado * contador;
-                                                System.out.println(multiplicado + "*" + contador + "=" + producto);
+                                            while (contador <= multiplicador) { 
+                                                System.out.println(
+                                                        multiplicado + "*" + contador + "=" + productos[contador]);
                                                 contador = contador + 1;
                                             }
+                                            System.out.println("while");
 
                                             System.out.println("");
                                             System.out.println("desea escoger otro bucle? ");
                                             System.out.println("1) si 2) no ");
                                             Seleccion_bucle = lector.nextInt();
 
-                                            if (Seleccion_bucle <= 2 & Seleccion_bucle >= 1) {
-                                                if (Seleccion_bucle == 1) {
-                                                    System.out.println("");
-                                                    System.out.println(
-                                                            "porfa escoja con cual bucle desea ver las multiplicaciones: ");
-                                                    System.out.println("1) do-while");
-                                                    System.out.println("2) repetir while");
-                                                    System.out.println("3) for");
-                                                    System.out.println("4) for each");
-                                                    System.out
-                                                            .print("coloque el numero de la opción que va a escoger: ");
-                                                    Seleccion_bucle = lector.nextInt();
-                                                    repite_seleccion_bucle = true;
+                                            do {
+                                                if (Seleccion_bucle <= 2 & Seleccion_bucle >= 1) {
+                                                    if (Seleccion_bucle == 1) {
+                                                        System.out.println("");
+                                                        System.out.println(
+                                                                "porfa escoja con cual bucle desea ver las multiplicaciones: ");
+                                                        System.out.println("1) do-while");
+                                                        System.out.println("2) repetir while");
+                                                        System.out.println("3) for");
+                                                        System.out.println("4) for each");
+                                                        System.out
+                                                                .print("coloque el numero de la opción que va a escoger: ");
+                                                        Seleccion_bucle = lector.nextInt();
+                                                        repite_seleccion_bucle = true;
+                                                    } else {
+                                                        System.out.println(
+                                                                "okey muchas gracias por haver visto este punto");
+                                                        repite_seleccion_bucle = false;
+                                                        repite_seleccion_punto=false;
+                                                    }
                                                 } else {
-
+                                                    System.out.println("porfavor escoja entre las opciones dadas: ");
+                                                    System.out.println("1) si 2) no ");
+                                                    Seleccion_bucle = lector.nextInt();
+                                                    repite_seleccion_bucle = false;
+                                                    repite_seleccion_punto=true; 
                                                 }
-                                            } else {
-                                                System.out.println("porfavor escoja entre las opciones dadas: ");
-                                                System.out.println("1) si 2) no ");
-                                                Seleccion_bucle = lector.nextInt();
-                                                repite_seleccion_bucle = false;
-                                            }
+                                            } while (repite_seleccion_bucle == false);
+
                                             break;
-                                        case 3:
+                                        case 3://for
 
                                             for (contador = 0; contador <= multiplicador; contador++) {
-                                                producto = multiplicado * contador;
-                                                System.out.println(multiplicado + "*" + contador + "=" + producto);
+
+                                                System.out.println(
+                                                        multiplicado + "*" + contador + "=" + productos[contador]);
                                             }
+                                            System.out.println("for");
 
                                             System.out.println("");
                                             System.out.println("desea escoger otro bucle? ");
@@ -154,6 +180,8 @@ public class Taller_1 {
                                                     Seleccion_bucle = lector.nextInt();
                                                     repite_seleccion_bucle = true;
                                                 } else {
+                                                    System.out
+                                                            .println("okey muchas gracias por haver visto este punto");
                                                     repite_seleccion_bucle = false;
                                                 }
                                             } else {
@@ -163,14 +191,8 @@ public class Taller_1 {
                                                 repite_seleccion_bucle = false;
                                             }
                                             break;
-                                        case 4:
+                                        case 4://foreach 
 
-                                            int[] productos = new int[multiplicador + 1];
-
-                                            for (contador = 0; contador <= multiplicador; contador++) {
-                                                producto = multiplicado * contador;
-                                                productos[contador] = producto;
-                                            }
                                             contador = 0;
                                             for (int contar : productos) {
                                                 contar = contador;
@@ -178,34 +200,44 @@ public class Taller_1 {
                                                         .println(multiplicado + "*" + contar + "=" + productos[contar]);
                                                 contador++;
                                             }
+                                            System.out.println("foreach");
 
                                             System.out.println("");
                                             System.out.println("desea escoger otro bucle? ");
                                             System.out.println("1) si 2) no ");
                                             Seleccion_bucle = lector.nextInt();
 
-                                            if (Seleccion_bucle <= 2 & Seleccion_bucle >= 1) {
-                                                if (Seleccion_bucle == 1) {
-                                                    System.out.println("");
-                                                    System.out.println(
-                                                            "porfa escoja con cual bucle desea ver las multiplicaciones: ");
-                                                    System.out.println("1) do-while");
-                                                    System.out.println("2) while");
-                                                    System.out.println("3) for");
-                                                    System.out.println("4) repetir for each");
-                                                    System.out
-                                                            .print("coloque el numero de la opción que va a escoger: ");
-                                                    Seleccion_bucle = lector.nextInt();
-                                                    repite_seleccion_bucle = true;
-                                                } else {
-                                                    repite_seleccion_bucle = false;
+                                            do {
+                                                switch (Seleccion_bucle) {
+                                                    case 1:
+                                                        System.out.println("");
+                                                        System.out.println(
+                                                                "porfa escoja con cual bucle desea ver las multiplicaciones: ");
+                                                        System.out.println("1) do-while");
+                                                        System.out.println("2) while");
+                                                        System.out.println("3) for");
+                                                        System.out.println("4) repetir for each");
+                                                        System.out
+                                                                .print("coloque el numero de la opción que va a escoger: ");
+                                                        Seleccion_bucle = lector.nextInt();
+                                                        repite_seleccion_bucle = true;
+                                                        break;
+
+                                                    case 2:
+                                                        System.out.println(
+                                                                "okey muchas gracias por haver visto este punto");
+                                                        repite_seleccion_bucle = false;
+
+                                                    default:
+                                                        System.out
+                                                                .println("porfavor escoja entre las opciones dadas: ");
+                                                        System.out.println("1) si 2) no ");
+                                                        Seleccion_bucle = lector.nextInt();
+                                                        repite_seleccion_bucle = false;
+                                                        break;
                                                 }
-                                            } else {
-                                                System.out.println("porfavor escoja entre las opciones dadas: ");
-                                                System.out.println("1) si 2) no ");
-                                                Seleccion_bucle = lector.nextInt();
-                                                repite_seleccion_bucle = false;
-                                            }
+                                            } while (repite_seleccion_bucle == false);
+
                                             break;
                                     }
                                 } else {
@@ -219,8 +251,49 @@ public class Taller_1 {
                                     System.out.print("coloque el numero de la opción que va a escoger: ");
                                     Seleccion_bucle = lector.nextInt();
                                 }
-                            } while (repite_seleccion_bucle);
-                            repite_seleccion_punto = false;
+                            } while (repite_seleccion_bucle==true);
+
+                            System.out.println("");
+                            System.out.println("desea escoger otro numero punto del taller??");
+                            System.out.println("1) si 2) no ");
+                            Seleccion_Punto = lector.nextInt();
+
+                            if (Seleccion_Punto == 2) {
+                                System.out.println("asta luego profe");
+                                System.exit(1);
+                            }
+
+                            System.out.println("los otros puntos son: ");
+                            System.out.println(
+                                    "2) Hacer de 0 a los dos últimos dígitos de su código estudiantil sacar media, moda y aritmética.");
+                            System.out.println(
+                                    "3) Pedir un numero random: nombres (del 1 al 23), precios que ud quiera y cantidad (del 1 al 15).");
+                            System.out.println("4) Dada una palabra imprimir el inverso de la palabra ");
+                            System.out.println(
+                                    "5) Pedir 5 palabras, y que se mire con cual palabra se puede hacer un crucigrama.");
+
+                            System.out.print("Por favor escoger la opción que desea ver: ");
+                            Seleccion_Punto=lector.nextInt();
+                            do {
+                                
+                            } while (Seleccion_Punto<=1||Seleccion_Punto>=6);
+                            switch (Seleccion_Punto) {
+                                case 2:
+                                    repite_seleccion_punto = true;
+                                    break;
+                                case 3:
+                                    repite_seleccion_punto = true;
+                                    break;
+                                case 4:
+                                    repite_seleccion_punto = true;
+                                    break;
+                                case 5:
+                                    repite_seleccion_punto = true;
+                                    break;
+                                default:
+                                    break;
+                            }
+
                             break;
 
                         // fin seleccion del primer punto
