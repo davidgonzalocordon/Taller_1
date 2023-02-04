@@ -342,19 +342,19 @@ public class Taller_1 {
                             }
                             switch (Seleccion_Punto) {
                                 case 2:
-                                    System.out.println("hola 2");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 case 3:
-                                    System.out.println("hola 3");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 case 4:
-                                    System.out.println("hola 4");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 case 5:
-                                    System.out.println("hola 5");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 default:
@@ -363,7 +363,7 @@ public class Taller_1 {
 
                             break;
 
-                        // fin seleccion del primer punto
+                        // fin punto 1
 
                         case 2:
                             System.out.println("punto 2");
@@ -414,19 +414,19 @@ public class Taller_1 {
                             }
                             switch (Seleccion_Punto) {
                                 case 1:
-                                    System.out.println("hola 1");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 case 3:
-                                    System.out.println("hola 3");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 case 4:
-                                    System.out.println("hola 4");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 case 5:
-                                    System.out.println("hola 5");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 default:
@@ -485,19 +485,19 @@ public class Taller_1 {
                             }
                             switch (Seleccion_Punto) {
                                 case 1:
-                                    System.out.println("hola 1");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 case 2:
-                                    System.out.println("hola 2");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 case 4:
-                                    System.out.println("hola 4");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 case 5:
-                                    System.out.println("hola 5");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 default:
@@ -558,19 +558,19 @@ public class Taller_1 {
                             }
                             switch (Seleccion_Punto) {
                                 case 1:
-                                    System.out.println("hola 1");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 case 2:
-                                    System.out.println("hola 2");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 case 3:
-                                    System.out.println("hola 3");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 case 5:
-                                    System.out.println("hola 5");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 default:
@@ -633,19 +633,19 @@ public class Taller_1 {
                             }
                             switch (Seleccion_Punto) {
                                 case 1:
-                                    System.out.println("hola 1");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 case 2:
-                                    System.out.println("hola 2");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 case 3:
-                                    System.out.println("hola 3");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 case 5:
-                                    System.out.println("hola 4");
+                                    System.out.println("");
                                     repite_seleccion_punto = true;
                                     break;
                                 default:
