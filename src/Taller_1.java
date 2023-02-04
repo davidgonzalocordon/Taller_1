@@ -22,7 +22,7 @@ public class Taller_1 {
 
             System.out.print("Por favor escoger la opción que desea ver: ");
             Seleccion_Punto = lector.nextInt();
-            
+
             boolean repite_seleccion_punto = true;
             Boolean repite_seleccion_bucle = true;
             do {
@@ -64,7 +64,7 @@ public class Taller_1 {
                             do {
                                 if (Seleccion_bucle <= 4 & Seleccion_bucle >= 1) {
                                     switch (Seleccion_bucle) {
-                                        case 1: //do while
+                                        case 1: // do while
                                             contador = 0;
                                             do {
                                                 System.out.println(
@@ -77,7 +77,7 @@ public class Taller_1 {
                                             System.out.println("desea escoger otro bucle? ");
                                             System.out.println("1) si 2) no ");
                                             Seleccion_bucle = lector.nextInt();
-                                            
+
                                             do {
                                                 if (Seleccion_bucle <= 2 & Seleccion_bucle >= 1) {
                                                     if (Seleccion_bucle == 1) {
@@ -96,21 +96,21 @@ public class Taller_1 {
                                                         System.out.println(
                                                                 "okey muchas gracias por haver visto este punto");
                                                         repite_seleccion_bucle = false;
-                                                        repite_seleccion_punto=true;
+                                                        repite_seleccion_punto = true;
                                                     }
                                                 } else {
                                                     System.out.println("porfavor escoja entre las opciones dadas: ");
                                                     System.out.println("1) si 2) no ");
                                                     Seleccion_bucle = lector.nextInt();
                                                     repite_seleccion_bucle = false;
-                                                    repite_seleccion_punto=true; 
+                                                    repite_seleccion_punto = true;
                                                 }
                                             } while (repite_seleccion_bucle == false);
 
                                             break;
-                                        case 2: //while
+                                        case 2: // while
                                             contador = 0;
-                                            while (contador <= multiplicador) { 
+                                            while (contador <= multiplicador) {
                                                 System.out.println(
                                                         multiplicado + "*" + contador + "=" + productos[contador]);
                                                 contador = contador + 1;
@@ -140,19 +140,19 @@ public class Taller_1 {
                                                         System.out.println(
                                                                 "okey muchas gracias por haver visto este punto");
                                                         repite_seleccion_bucle = false;
-                                                        repite_seleccion_punto=false;
+                                                        repite_seleccion_punto = false;
                                                     }
                                                 } else {
                                                     System.out.println("porfavor escoja entre las opciones dadas: ");
                                                     System.out.println("1) si 2) no ");
                                                     Seleccion_bucle = lector.nextInt();
                                                     repite_seleccion_bucle = false;
-                                                    repite_seleccion_punto=true; 
+                                                    repite_seleccion_punto = true;
                                                 }
                                             } while (repite_seleccion_bucle == false);
 
                                             break;
-                                        case 3://for
+                                        case 3:// for
 
                                             for (contador = 0; contador <= multiplicador; contador++) {
 
@@ -191,7 +191,7 @@ public class Taller_1 {
                                                 repite_seleccion_bucle = false;
                                             }
                                             break;
-                                        case 4://foreach 
+                                        case 4:// foreach
 
                                             contador = 0;
                                             for (int contar : productos) {
@@ -251,7 +251,7 @@ public class Taller_1 {
                                     System.out.print("coloque el numero de la opción que va a escoger: ");
                                     Seleccion_bucle = lector.nextInt();
                                 }
-                            } while (repite_seleccion_bucle==true);
+                            } while (repite_seleccion_bucle == true);
 
                             System.out.println("");
                             System.out.println("desea escoger otro numero punto del taller??");
@@ -273,10 +273,10 @@ public class Taller_1 {
                                     "5) Pedir 5 palabras, y que se mire con cual palabra se puede hacer un crucigrama.");
 
                             System.out.print("Por favor escoger la opción que desea ver: ");
-                            Seleccion_Punto=lector.nextInt();
+                            Seleccion_Punto = lector.nextInt();
                             do {
-                                
-                            } while (Seleccion_Punto<=1||Seleccion_Punto>=6);
+
+                            } while (Seleccion_Punto <= 1 || Seleccion_Punto >= 6);
                             switch (Seleccion_Punto) {
                                 case 2:
                                     repite_seleccion_punto = true;
