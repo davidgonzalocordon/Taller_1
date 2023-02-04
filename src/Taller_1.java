@@ -23,6 +23,7 @@ public class Taller_1 {
             System.out.print("Por favor escoger la opción que desea ver: ");
             Seleccion_Punto = lector.nextInt();
 
+            System.out.println("");
             boolean repite_seleccion_punto = true;
             Boolean repite_seleccion_bucle = true;
             do {
