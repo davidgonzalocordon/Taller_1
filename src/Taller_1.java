@@ -52,7 +52,7 @@ public class Taller_1 {
                                     .println("el multiplicado va a ser multiplicado asta el numero " + multiplicador);
 
                             System.out.println("");
-                            System.out.println("porfa escoja con cual bucle desea ver las multiplicaciones: ");
+                            System.out.println("por favor escoja con cual bucle desea ver las multiplicaciones: ");
                             System.out.println("1) do-while");
                             System.out.println("2) while");
                             System.out.println("3) for");
@@ -79,7 +79,7 @@ public class Taller_1 {
                                             Seleccion_bucle = lector.nextInt();
 
                                             while (Seleccion_bucle <= 0 || Seleccion_bucle >= 3) {
-                                                System.out.println("porfavor escoja entre las opciones dadas: ");
+                                                System.out.println("por favor escoja entre las opciones dadas: ");
                                                 System.out.println("1) si 2) no ");
                                                 Seleccion_bucle = lector.nextInt();
                                                 repite_seleccion_bucle = false;
@@ -89,9 +89,9 @@ public class Taller_1 {
                                             if (Seleccion_bucle == 1) {
                                                 System.out.println("");
                                                 System.out.println(
-                                                        "porfa escoja con cual bucle desea ver las multiplicaciones: ");
-                                                System.out.println("1) do-while");
-                                                System.out.println("2) repetir while");
+                                                        "por favor escoja con cual bucle desea ver las multiplicaciones: ");
+                                                System.out.println("1) repetir do-while");
+                                                System.out.println("2) while");
                                                 System.out.println("3) for");
                                                 System.out.println("4) for each");
                                                 System.out
@@ -100,9 +100,9 @@ public class Taller_1 {
 
                                                 while (Seleccion_bucle <= 0 || Seleccion_bucle >= 5) {
                                                     System.out.println("");
-                                                    System.out.println("porfavor escoja entre las opciones dadas: ");
-                                                    System.out.println("1) do-while");
-                                                    System.out.println("2) repetir while");
+                                                    System.out.println("por favor escoja entre las opciones dadas: ");
+                                                    System.out.println("1) repetir do-while");
+                                                    System.out.println("2) while");
                                                     System.out.println("3) for");
                                                     System.out.println("4) for each");
                                                     System.out
@@ -134,7 +134,7 @@ public class Taller_1 {
                                             Seleccion_bucle = lector.nextInt();
 
                                             while (Seleccion_bucle <= 0 || Seleccion_bucle >= 3) {
-                                                System.out.println("porfavor escoja entre las opciones dadas: ");
+                                                System.out.println("por favor escoja entre las opciones dadas: ");
                                                 System.out.println("1) si 2) no ");
                                                 Seleccion_bucle = lector.nextInt();
                                                 repite_seleccion_bucle = false;
@@ -144,7 +144,7 @@ public class Taller_1 {
                                             if (Seleccion_bucle == 1) {
                                                 System.out.println("");
                                                 System.out.println(
-                                                        "porfa escoja con cual bucle desea ver las multiplicaciones: ");
+                                                        "por favor escoja con cual bucle desea ver las multiplicaciones: ");
                                                 System.out.println("1) do-while");
                                                 System.out.println("2) repetir while");
                                                 System.out.println("3) for");
@@ -155,7 +155,7 @@ public class Taller_1 {
 
                                                 while (Seleccion_bucle <= 0 || Seleccion_bucle >= 5) {
                                                     System.out.println("");
-                                                    System.out.println("porfavor escoja entre las opciones dadas: ");
+                                                    System.out.println("por favor escoja entre las opciones dadas: ");
                                                     System.out.println("1) do-while");
                                                     System.out.println("2) repetir while");
                                                     System.out.println("3) for");
@@ -189,7 +189,7 @@ public class Taller_1 {
                                             Seleccion_bucle = lector.nextInt();
 
                                             while (Seleccion_bucle <= 0 || Seleccion_bucle >= 3) {
-                                                System.out.println("porfavor escoja entre las opciones dadas: ");
+                                                System.out.println("por favor escoja entre las opciones dadas: ");
                                                 System.out.println("1) si 2) no ");
                                                 Seleccion_bucle = lector.nextInt();
                                                 repite_seleccion_bucle = false;
@@ -199,10 +199,10 @@ public class Taller_1 {
                                             if (Seleccion_bucle == 1) {
                                                 System.out.println("");
                                                 System.out.println(
-                                                        "porfa escoja con cual bucle desea ver las multiplicaciones: ");
+                                                        "por favor escoja con cual bucle desea ver las multiplicaciones: ");
                                                 System.out.println("1) do-while");
-                                                System.out.println("2) repetir while");
-                                                System.out.println("3) for");
+                                                System.out.println("2) while");
+                                                System.out.println("3) repetir for");
                                                 System.out.println("4) for each");
                                                 System.out
                                                         .print("coloque el numero de la opción que va a escoger: ");
@@ -210,10 +210,10 @@ public class Taller_1 {
 
                                                 while (Seleccion_bucle <= 0 || Seleccion_bucle >= 5) {
                                                     System.out.println("");
-                                                    System.out.println("porfavor escoja entre las opciones dadas: ");
+                                                    System.out.println("por favor escoja entre las opciones dadas: ");
                                                     System.out.println("1) do-while");
-                                                    System.out.println("2) repetir while");
-                                                    System.out.println("3) for");
+                                                    System.out.println("2) while");
+                                                    System.out.println("3) repetir for");
                                                     System.out.println("4) for each");
                                                     System.out
                                                             .print("coloque el numero de la opción que va a escoger: ");
@@ -245,7 +245,7 @@ public class Taller_1 {
                                             Seleccion_bucle = lector.nextInt();
 
                                             while (Seleccion_bucle <= 0 || Seleccion_bucle >= 3) {
-                                                System.out.println("porfavor escoja entre las opciones dadas: ");
+                                                System.out.println("por favor escoja entre las opciones dadas: ");
                                                 System.out.println("1) si 2) no ");
                                                 Seleccion_bucle = lector.nextInt();
                                                 repite_seleccion_bucle = false;
@@ -255,22 +255,22 @@ public class Taller_1 {
                                             if (Seleccion_bucle == 1) {
                                                 System.out.println("");
                                                 System.out.println(
-                                                        "porfa escoja con cual bucle desea ver las multiplicaciones: ");
+                                                        "por favor escoja con cual bucle desea ver las multiplicaciones: ");
                                                 System.out.println("1) do-while");
-                                                System.out.println("2) repetir while");
+                                                System.out.println("2) while");
                                                 System.out.println("3) for");
-                                                System.out.println("4) for each");
+                                                System.out.println("4) repetir foreach");
                                                 System.out
                                                         .print("coloque el numero de la opción que va a escoger: ");
                                                 Seleccion_bucle = lector.nextInt();
 
                                                 while (Seleccion_bucle <= 0 || Seleccion_bucle >= 5) {
                                                     System.out.println("");
-                                                    System.out.println("porfavor escoja entre las opciones dadas: ");
+                                                    System.out.println("por favor escoja entre las opciones dadas: ");
                                                     System.out.println("1) do-while");
-                                                    System.out.println("2) repetir while");
+                                                    System.out.println("2) while");
                                                     System.out.println("3) for");
-                                                    System.out.println("4) for each");
+                                                    System.out.println("4) repetir foreach");
                                                     System.out
                                                             .print("coloque el numero de la opción que va a escoger: ");
                                                     Seleccion_bucle = lector.nextInt();
@@ -289,7 +289,7 @@ public class Taller_1 {
                                 } else {
                                     System.out.println("");
                                     System.out.println(
-                                            "profe porfa rinda se con el tema de intentar tumbarme el código con la cuestión de colocar un numero de opción que no se pude ");
+                                            "profe por favor rinda se con el tema de intentar tumbarme el código con la cuestión de colocar un numero de opción que no se pude ");
                                     System.out.println("1) do-while");
                                     System.out.println("2) while");
                                     System.out.println("3) for");
@@ -360,7 +360,7 @@ public class Taller_1 {
                     }
                 } else {
                     System.out.println("");
-                    System.out.println("profe porfa no me trate de tirar el cogido como lo hacia Duglas");
+                    System.out.println("profe por favor no me trate de tirar el cogido como lo hacia Duglas");
                     System.out.println("escoja una de las opciones: ");
                     System.out.println(
                             "1) Dado dos números aleatorios entre el 1 al 2023, imprimir la tabla de multiplicar donde A es el numero del que se tiene que hacer la tabla y B es asta el multiplicador que debe llegar. ");
