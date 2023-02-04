@@ -668,6 +668,7 @@ public class Taller_1 {
                     System.out.println("4) Dada una palabra imprimir el inverso de la palabra. ");
                     System.out.println(
                             "5) Pedir 5 palabras, y que se mire con cual palabra se puede hacer un crucigrama.");
+                    System.out.print("Por favor escoger la opción que desea ver: ");
                     Seleccion_Punto = lector.nextInt();
 
                 }
