@@ -47,6 +47,7 @@ public class Taller_1 {
                                 productos[contador] = producto;
                             }
 
+                            System.out.println("");
                             System.out.println(" los números que salieron son: ");
                             System.out.println("multiplicado = " + multiplicado);
                             System.out
