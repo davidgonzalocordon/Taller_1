@@ -29,6 +29,7 @@ public class Taller_1 {
             } else {
                 System.out.println("");
                 while (!Validar.matches("[1-5]")) {
+                    System.out.println("");
                     System.out.println("por favor escoja una respuesta de selección numérica ");
                     System.out.println(
                             "1) Dado dos números aleatorios entre el 1 al 2023, imprimir la tabla de multiplicar donde A es el numero del que se tiene que hacer la tabla y B es asta el multiplicador que debe llegar. ");
@@ -88,6 +89,7 @@ public class Taller_1 {
                             } else {
                                 System.out.println("");
                                 while (!Validar.matches("[1-4]")) {
+                                    System.out.println("");
                                     System.out.println("por favor escoja una respuesta de selección valida ");
                                     System.out.println("1) do-while");
                                     System.out.println("2) while");
@@ -277,18 +279,24 @@ public class Taller_1 {
                                                 System.out.println("4) for each");
                                                 System.out
                                                         .print("coloque el numero de la opción que va a escoger: ");
-                                                Seleccion_bucle = lector.nextInt();
-
-                                                while (Seleccion_bucle <= 0 || Seleccion_bucle >= 5) {
+                                                Validar = lector.nextLine();
+                                                if (Validar.matches("[1-4]")) {
+                                                    Seleccion_bucle = Integer.parseInt(Validar);
+                                                } else {
                                                     System.out.println("");
-                                                    System.out.println("por favor escoja entre las opciones dadas: ");
-                                                    System.out.println("1) do-while");
-                                                    System.out.println("2) while");
-                                                    System.out.println("3) repetir for");
-                                                    System.out.println("4) for each");
-                                                    System.out
-                                                            .print("coloque el numero de la opción que va a escoger: ");
-                                                    Seleccion_bucle = lector.nextInt();
+                                                    while (!Validar.matches("[1-4]")) {
+                                                        System.out.println("");
+                                                        System.out.println(
+                                                                "por favor escoja una respuesta de selección valida ");
+                                                        System.out.println("1) do-while");
+                                                        System.out.println("2) while");
+                                                        System.out.println("3) repetir for");
+                                                        System.out.println("4) for each");
+                                                        System.out.println(
+                                                                "coloque el numero de acuerdo a su decision: ");
+                                                        Validar = lector.nextLine();
+                                                    }
+                                                    Seleccion_bucle = Integer.parseInt(Validar);
                                                 }
 
                                                 repite_seleccion_bucle = true;
@@ -339,18 +347,24 @@ public class Taller_1 {
                                                 System.out.println("4) repetir foreach");
                                                 System.out
                                                         .print("coloque el numero de la opción que va a escoger: ");
-                                                Seleccion_bucle = lector.nextInt();
-
-                                                while (Seleccion_bucle <= 0 || Seleccion_bucle >= 5) {
+                                                Validar = lector.nextLine();
+                                                if (Validar.matches("[1-4]")) {
+                                                    Seleccion_bucle = Integer.parseInt(Validar);
+                                                } else {
                                                     System.out.println("");
-                                                    System.out.println("por favor escoja entre las opciones dadas: ");
-                                                    System.out.println("1) do-while");
-                                                    System.out.println("2) while");
-                                                    System.out.println("3) for");
-                                                    System.out.println("4) repetir foreach");
-                                                    System.out
-                                                            .print("coloque el numero de la opción que va a escoger: ");
-                                                    Seleccion_bucle = lector.nextInt();
+                                                    while (!Validar.matches("[1-4]")) {
+                                                        System.out.println("");
+                                                        System.out.println(
+                                                                "por favor escoja una respuesta de selección valida ");
+                                                        System.out.println("1) do-while");
+                                                        System.out.println("2) while");
+                                                        System.out.println("3) for");
+                                                        System.out.println("4) repetir for each");
+                                                        System.out.println(
+                                                                "coloque el numero de acuerdo a su decision: ");
+                                                        Validar = lector.nextLine();
+                                                    }
+                                                    Seleccion_bucle = Integer.parseInt(Validar);
                                                 }
 
                                                 repite_seleccion_bucle = true;
@@ -412,11 +426,12 @@ public class Taller_1 {
 
                             System.out.print("Por favor escoger la opción que desea ver: ");
                             Validar = lector.nextLine();
-                            if (Validar.matches("[1-5]")) {
+                            if (Validar.matches("[2-5]")) {
                                 Seleccion_Punto = Integer.parseInt(Validar);
                             } else {
                                 System.out.println("");
-                                while (!Validar.matches("[1-5]")) {
+                                while (!Validar.matches("[2-5]")) {
+                                    System.out.println("");
                                     System.out.println("por favor escoja una respuesta de seleccion valida ");
                                     System.out.println(
                                             "2) De 0 a los dos últimos dígitos de su código estudiantil, generar un numero random que va a hacer la cantidad de números que debe ingresar y con esa lista de números sacar media, moda y aritmética.");
@@ -431,40 +446,6 @@ public class Taller_1 {
                                 Seleccion_Punto = Integer.parseInt(Validar);
                             }
 
-                            while (Seleccion_Punto <= 1 || Seleccion_Punto >= 6) {
-                                System.out.println("");
-                                System.out.println("por favor escoja entre las opciones dadas: ");
-                                System.out.println(
-                                        "2) De 0 a los dos últimos dígitos de su código estudiantil, generar un numero random que va a hacer la cantidad de números que debe ingresar y con esa lista de números sacar media, moda y aritmética.");
-                                System.out.println(
-                                        "3) Pedir un numero random: nombres (del 1 al 23), precios que ud quiera y cantidad (del 1 al 15).");
-
-                                System.out.println("4) Dada una palabra imprimir el inverso de la palabra ");
-                                System.out.println(
-                                        "5) Pedir 5 palabras, y que se mire con cual palabra se puede hacer un crucigrama.");
-
-                                System.out.print("Por favor escoger la opción que desea ver: ");
-                                Validar = lector.nextLine();
-                                if (Validar.matches("[1-5]")) {
-                                    Seleccion_Punto = Integer.parseInt(Validar);
-                                } else {
-                                    System.out.println("");
-                                    while (!Validar.matches("[1-5]")) {
-                                        System.out.println("por favor escoja una respuesta de seleccion valida ");
-                                        System.out.println(
-                                                "2) De 0 a los dos últimos dígitos de su código estudiantil, generar un numero random que va a hacer la cantidad de números que debe ingresar y con esa lista de números sacar media, moda y aritmética.");
-                                        System.out.println(
-                                                "3) Pedir un numero random: nombres (del 1 al 23), precios que ud quiera y cantidad (del 1 al 15).");
-                                        System.out.println("4) Dada una palabra imprimir el inverso de la palabra ");
-                                        System.out.println(
-                                                "5) Pedir 5 palabras, y que se mire con cual palabra se puede hacer un crucigrama.");
-                                        System.out.println("coloque el numero que va a seleccionar es: ");
-                                        Validar = lector.nextLine();
-                                    }
-                                    Seleccion_Punto = Integer.parseInt(Validar);
-                                }
-
-                            }
                             switch (Seleccion_Punto) {
                                 case 2:
                                     System.out.println("");
@@ -539,6 +520,7 @@ public class Taller_1 {
                             } else {
                                 System.out.println("");
                                 while (!Validar.matches("[1-5]")) {
+                                    System.out.println("");
                                     System.out.println("por favor escoja una respuesta de seleccion valida ");
                                     System.out.println(
                                             "1) Dado dos números aleatorios entre el 1 al 2023, imprimir la tabla de multiplicar donde A es el numero del que se tiene que hacer la tabla y B es asta el multiplicador que debe llegar.");
@@ -572,6 +554,7 @@ public class Taller_1 {
                                 } else {
                                     System.out.println("");
                                     while (!Validar.matches("[1-5]")) {
+                                        System.out.println("");
                                         System.out.println("por favor escoja una respuesta de seleccion valida ");
                                         System.out.println(
                                                 "1) Dado dos números aleatorios entre el 1 al 2023, imprimir la tabla de multiplicar donde A es el numero del que se tiene que hacer la tabla y B es asta el multiplicador que debe llegar.");
@@ -654,6 +637,7 @@ public class Taller_1 {
                             } else {
                                 System.out.println("");
                                 while (!Validar.matches("[1-5]")) {
+                                    System.out.println("");
                                     System.out.println("por favor escoja una respuesta de seleccion valida ");
                                     System.out.println(
                                             "1) Dado dos números aleatorios entre el 1 al 2023, imprimir la tabla de multiplicar donde A es el numero del que se tiene que hacer la tabla y B es asta el multiplicador que debe llegar.");
@@ -687,6 +671,7 @@ public class Taller_1 {
                                 } else {
                                     System.out.println("");
                                     while (!Validar.matches("[1-5]")) {
+                                        System.out.println("");
                                         System.out.println("por favor escoja una respuesta de seleccion valida ");
                                         System.out.println(
                                                 "1) Dado dos números aleatorios entre el 1 al 2023, imprimir la tabla de multiplicar donde A es el numero del que se tiene que hacer la tabla y B es asta el multiplicador que debe llegar.");
@@ -770,6 +755,7 @@ public class Taller_1 {
                             } else {
                                 System.out.println("");
                                 while (!Validar.matches("[1-5]")) {
+                                    System.out.println("");
                                     System.out.println("por favor escoja una respuesta de seleccion valida ");
                                     System.out.println(
                                             "1) Dado dos números aleatorios entre el 1 al 2023, imprimir la tabla de multiplicar donde A es el numero del que se tiene que hacer la tabla y B es asta el multiplicador que debe llegar.");
@@ -800,11 +786,12 @@ public class Taller_1 {
 
                                 System.out.print("Por favor escoger la opción que desea ver: ");
                                 Validar = lector.nextLine();
-                                if (Validar.matches("[1-5]")) {
+                                if (Validar.matches("[1-3]") || Validar.matches("[5]")) {
                                     Seleccion_Punto = Integer.parseInt(Validar);
                                 } else {
                                     System.out.println("");
                                     while (!Validar.matches("[1-5]")) {
+                                        System.out.println("");
                                         System.out.println("por favor escoja una respuesta de seleccion valida ");
                                         System.out.println(
                                                 "1) Dado dos números aleatorios entre el 1 al 2023, imprimir la tabla de multiplicar donde A es el numero del que se tiene que hacer la tabla y B es asta el multiplicador que debe llegar.");
@@ -891,6 +878,7 @@ public class Taller_1 {
                             } else {
                                 System.out.println("");
                                 while (!Validar.matches("[1-4]")) {
+                                    System.out.println("");
                                     System.out.println("por favor escoja una respuesta de seleccion valida ");
                                     System.out.println(
                                             "1) Dado dos números aleatorios entre el 1 al 2023, imprimir la tabla de multiplicar donde A es el numero del que se tiene que hacer la tabla y B es asta el multiplicador que debe llegar.");
