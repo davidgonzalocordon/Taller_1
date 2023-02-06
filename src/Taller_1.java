@@ -483,8 +483,8 @@ public class Taller_1 {
                             int[] list_num = new int[num_max];
                             int datosP2;
 
-                            System.out.println("el numero maximo de numeros que se pueden registrar es de "+num_max);
-                            int i=1;
+                            System.out.println("el numero maximo de numeros que se pueden registrar es de " + num_max);
+                            int i = 1;
                             for (int j = 0; j < list_num.length; j++) {
                                 System.out.println("por favor digitar un numero");
                                 Validar = lector.nextLine();
@@ -502,9 +502,8 @@ public class Taller_1 {
                                     }
                                     datosP2 = Integer.parseInt(Validar);
                                 }
-                                list_num[i]= datosP2;
+                                list_num[i] = datosP2;
                             }
-                            
 
                             System.out.println("");
                             System.out.println("por favor escoja con cual bucle desea ver las multiplicaciones: ");
