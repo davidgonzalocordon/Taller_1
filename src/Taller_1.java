@@ -488,6 +488,7 @@ public class Taller_1 {
                             double residuo = num_max % 2;
                             Math.round(mitad_vec);
                             double a = mitad_vec + 1;
+                            double media = 0;
 
                             System.out.println("el numero maximo de numeros que se pueden registrar es de " + num_max);
 
@@ -676,6 +677,8 @@ public class Taller_1 {
                                             break;
                                         case 3:// for
 
+                                            // mediana
+
                                             if (num_max == 1) {
                                                 System.out.println("la mediana de este ejercicio es: 1");
                                             }
@@ -683,14 +686,16 @@ public class Taller_1 {
                                             if (residuo == 0 & num_max != 1) {
                                                 for (int i = 0; i < list_num.length; i++) {
                                                     if (i == mitad_vec) {
-                                                        rang_1 = i;
+                                                        rang_1 = list_num[i - 1];
                                                     } else {
                                                         if (i == a) {
-                                                            rang_2 = i;
+                                                            rang_2 = list_num[i - 1];
                                                         }
                                                     }
                                                 }
-                                                mediana_par = list_num[rang_1] + list_num[rang_2];
+
+                                                mediana_par = rang_1 + rang_2;
+                                                System.out.println(mediana_par);
                                                 mediana_par = mediana_par / 2;
                                                 System.out.println("la mediana es de " + mediana_par);
 
@@ -704,6 +709,14 @@ public class Taller_1 {
                                                 }
 
                                             }
+
+                                            for (int i = 0; i < list_num.length; i++) {
+                                                media = media + list_num[i];
+                                            }
+
+                                            media = media / num_max;
+                                            System.out.println("");
+                                            System.out.println("la media de los datos dados es: " + (media));
 
                                             System.out.println("for");
 
