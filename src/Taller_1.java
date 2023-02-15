@@ -954,10 +954,8 @@ public class Taller_1 {
 
                                             // media
                                             media = 0;
-
-                                            while (contador < list_num.length) {
-                                                media = media + list_num[contador];
-                                                contador++;
+                                            for (int k : list_num) {
+                                                media = media + list_num[k];
                                             }
 
                                             media = media / num_max;
