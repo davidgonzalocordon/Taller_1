@@ -494,23 +494,9 @@ public class Taller_1 {
 
                             for (int j = 0; j < list_num.length; j++) {
                                 System.out.println("por favor digitar el valor #" + (j + 1));
+                                list_num[j] = lector.nextInt();
                                 Validar = lector.nextLine();
-                                if (Validar.matches(
-                                        "[0-99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999]")) {
-                                    datosP2 = Integer.parseInt(Validar);
-                                    list_num[j] = datosP2;
-                                } else {
-                                    System.out.println("");
-                                    while (!Validar.matches(
-                                            "[1-99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999]")) {
-                                        System.out.println("");
-                                        System.out.println(
-                                                "por favor escriba un numero para el valor #" + (j + 1));
-                                        Validar = lector.nextLine();
-                                    }
-                                    datosP2 = Integer.parseInt(Validar);
-                                    list_num[j] = datosP2;
-                                }
+
                             }
                             System.out.println("");
 
@@ -546,9 +532,75 @@ public class Taller_1 {
                                     switch (Seleccion_bucle) {
                                         case 1: // do while
 
-                                            do {
+                                            // mediana
 
-                                            } while (repite_seleccion_punto);
+                                            if (num_max == 1) {
+                                                System.out.println("la mediana de este ejercicio es: 1");
+                                            }
+
+                                            contador = 0;
+                                            if (residuo == 0 & num_max != 1) {
+
+                                                do {
+                                                    switch (num_max) {
+                                                        case 2:
+                                                            if (contador == mitad_vec) {
+
+                                                                rang_1 = list_num[contador - 1];
+                                                            }
+                                                            if (contador == (int) a) {
+
+                                                                rang_2 = list_num[contador - 1];
+
+                                                            }
+                                                            break;
+
+                                                        case 4:
+                                                            if (contador == mitad_vec) {
+                                                                rang_1 = list_num[contador - 1];
+                                                            } else {
+                                                                if (contador == a) {
+                                                                    rang_2 = list_num[contador - 1];
+                                                                }
+                                                            }
+                                                            break;
+                                                    }
+
+                                                    contador++;
+                                                } while (contador <= list_num.length);
+
+                                                mediana_par = rang_1 + rang_2;
+
+                                                mediana_par = mediana_par / 2;
+                                                System.out.println("la mediana es de " + mediana_par);
+                                                mediana_par = 0;
+                                                rang_1 = 0;
+                                                rang_2 = 0;
+
+                                            } else {
+                                                do {
+                                                    if (contador == mitad_vec) {
+                                                        System.out.println(
+                                                                "la mediana es: " + list_num[(int) mitad_vec]);
+                                                    }
+                                                    contador++;
+                                                } while (contador < list_num.length);
+
+                                            }
+
+                                            // media
+                                            contador = 0;
+                                            media = 0;
+                                            do {
+                                                media = media + list_num[contador];
+                                                contador++;
+                                            } while (contador < list_num.length);
+
+                                            media = media / num_max;
+                                            System.out.println("");
+                                            System.out.println("la media de los datos dados es: " + (media));
+
+                                            // moda
 
                                             System.out.println("do while");
 
@@ -613,6 +665,75 @@ public class Taller_1 {
                                             break;
                                         case 2: // while
                                             contador = 0;
+                                            // mediana
+
+                                            if (num_max == 1) {
+                                                System.out.println("la mediana de este ejercicio es: 1");
+                                            }
+
+                                            contador = 0;
+                                            if (residuo == 0 & num_max != 1) {
+
+                                                while (contador <= list_num.length) {
+                                                    switch (num_max) {
+                                                        case 2:
+                                                            if (contador == mitad_vec) {
+
+                                                                rang_1 = list_num[contador - 1];
+                                                            }
+                                                            if (contador == (int) a) {
+
+                                                                rang_2 = list_num[contador - 1];
+
+                                                            }
+                                                            break;
+
+                                                        case 4:
+                                                            if (contador == mitad_vec) {
+                                                                rang_1 = list_num[contador - 1];
+                                                            } else {
+                                                                if (contador == a) {
+                                                                    rang_2 = list_num[contador - 1];
+                                                                }
+                                                            }
+                                                            break;
+                                                    }
+
+                                                    contador++;
+                                                }
+
+                                                mediana_par = rang_1 + rang_2;
+
+                                                mediana_par = mediana_par / 2;
+                                                System.out.println("la mediana es de " + mediana_par);
+                                                mediana_par = 0;
+                                                rang_1 = 0;
+                                                rang_2 = 0;
+
+                                            } else {
+                                                while (contador < list_num.length) {
+                                                    if (contador == mitad_vec) {
+                                                        System.out.println(
+                                                                "la mediana es: " + list_num[(int) mitad_vec]);
+                                                    }
+                                                    contador++;
+                                                }
+
+                                            }
+
+                                            // media
+                                            contador = 0;
+                                            media = 0;
+                                            while (contador < list_num.length) {
+                                                media = media + list_num[contador];
+                                                contador++;
+                                            }
+
+                                            media = media / num_max;
+                                            System.out.println("");
+                                            System.out.println("la media de los datos dados es: " + (media));
+
+                                            // moda
 
                                             System.out.println("while");
 
@@ -684,7 +805,7 @@ public class Taller_1 {
                                             }
 
                                             if (residuo == 0 & num_max != 1) {
-                                                for (int i = 0; i < list_num.length; i++) {
+                                                for (int i = 0; i <= list_num.length; i++) {
                                                     if (i == mitad_vec) {
                                                         rang_1 = list_num[i - 1];
                                                     } else {
@@ -710,6 +831,8 @@ public class Taller_1 {
 
                                             }
 
+                                            // media
+                                            media = 0;
                                             for (int i = 0; i < list_num.length; i++) {
                                                 media = media + list_num[i];
                                             }
@@ -717,6 +840,8 @@ public class Taller_1 {
                                             media = media / num_max;
                                             System.out.println("");
                                             System.out.println("la media de los datos dados es: " + (media));
+
+                                            // moda
 
                                             System.out.println("for");
 
@@ -778,6 +903,68 @@ public class Taller_1 {
                                             }
                                             break;
                                         case 4:// foreach
+
+                                            // mediana
+
+                                            if (num_max == 1) {
+                                                System.out.println("la mediana de este ejercicio es: 1");
+                                            }
+
+                                            contador = 0;
+                                            if (residuo == 0 & num_max != 1) {
+
+                                                for (int k : list_num) {
+                                                    switch (num_max) {
+                                                        case 2:
+                                                            if (k == mitad_vec) {
+
+                                                                rang_1 = list_num[k - 1];
+                                                                rang_2 = list_num[k];
+                                                            }
+
+                                                            break;
+
+                                                        case 4:
+                                                            if (k == mitad_vec) {
+                                                                rang_1 = list_num[k - 1];
+                                                            } else {
+                                                                if (k == a) {
+                                                                    rang_2 = list_num[k - 1];
+                                                                }
+                                                            }
+                                                            break;
+                                                    }
+
+                                                }
+
+                                                mediana_par = rang_1 + rang_2;
+
+                                                mediana_par = mediana_par / 2;
+                                                System.out.println("la mediana es de " + mediana_par);
+                                                mediana_par = 0;
+                                                rang_1 = 0;
+                                                rang_2 = 0;
+
+                                            } else {
+
+                                                System.out.println(
+                                                        "la mediana es: " + list_num[(int) mitad_vec]);
+
+                                            }
+
+                                            // media
+                                            media = 0;
+
+                                            while (contador < list_num.length) {
+                                                media = media + list_num[contador];
+                                                contador++;
+                                            }
+
+                                            media = media / num_max;
+                                            System.out.println("");
+                                            System.out.println("la media de los datos dados es: " + (media));
+
+                                            // moda
 
                                             System.out.println("foreach");
 
