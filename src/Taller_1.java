@@ -1,5 +1,8 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 import java.util.Random;
+import java.lang.reflect.Array;
+import java.util.Collections;
 
 public class Taller_1 {
 
@@ -48,6 +51,8 @@ public class Taller_1 {
             System.out.println("");
             boolean repite_seleccion_punto = true;
             Boolean repite_seleccion_bucle = true;
+            int contador = 0;
+            int contador2 = 0;
             do {
                 if (Seleccion_Punto <= 5 & Seleccion_Punto >= 1) {
                     switch (Seleccion_Punto) {
@@ -61,7 +66,7 @@ public class Taller_1 {
                             int multiplicado, multiplicador, producto;
                             multiplicado = numA.nextInt(2023) + 1;
                             multiplicador = numA.nextInt(2023) + 1;
-                            int contador = 0;
+
                             int[] productos = new int[multiplicador + 1];
 
                             System.out.println("");
@@ -480,7 +485,7 @@ public class Taller_1 {
 
                             int num_max = (int) (Math.random() * 4 + 1);
                             int[] list_num = new int[num_max];
-                            int datosP2, rang_1, rang_2;
+                            int datosP2, rang_1, rang_2, moda, contador3, contador4;
                             double mediana_par;
                             rang_1 = 0;
                             rang_2 = 0;
@@ -601,6 +606,29 @@ public class Taller_1 {
                                             System.out.println("la media de los datos dados es: " + (media));
 
                                             // moda
+                                            moda = 0;
+                                            contador2 = -1;
+                                            contador3 = 0;
+                                            contador4 = 0;
+
+                                            do {
+                                                contador = 0;
+                                                do {
+                                                    if (list_num[contador3] == list_num[contador4]) {
+                                                        contador = contador++;
+                                                    }
+                                                    contador4++;
+                                                } while (contador4 >= list_num.length);
+
+                                                if (contador > contador2) {
+
+                                                    moda = list_num[contador3];
+                                                    contador2 = contador;
+
+                                                }
+                                                contador3++;
+                                            } while (contador3 >= list_num.length);
+                                            System.out.println("la moda es: " + moda);
 
                                             System.out.println("do while");
 
@@ -734,6 +762,29 @@ public class Taller_1 {
                                             System.out.println("la media de los datos dados es: " + (media));
 
                                             // moda
+                                            moda = 0;
+                                            contador2 = -1;
+                                            contador3 = 0;
+                                            contador4 = 0;
+
+                                            while (contador3 < list_num.length) {
+                                                contador = 0;
+                                                while (contador4 < list_num.length) {
+                                                    if (list_num[contador3] == list_num[contador4]) {
+                                                        contador = contador++;
+                                                    }
+                                                    contador4++;
+                                                }
+                                                if (contador > contador2) {
+
+                                                    moda = list_num[contador3];
+                                                    contador2 = contador;
+
+                                                }
+                                                contador3++;
+                                            }
+
+                                            System.out.println("la moda es: " + moda);
 
                                             System.out.println("while");
 
@@ -806,27 +857,45 @@ public class Taller_1 {
 
                                             if (residuo == 0 & num_max != 1) {
                                                 for (int i = 0; i <= list_num.length; i++) {
-                                                    if (i == mitad_vec) {
-                                                        rang_1 = list_num[i - 1];
-                                                    } else {
-                                                        if (i == a) {
-                                                            rang_2 = list_num[i - 1];
-                                                        }
+                                                    switch (num_max) {
+                                                        case 2:
+                                                            if (i == mitad_vec) {
+
+                                                                rang_1 = list_num[i - 1];
+                                                            }
+                                                            if (i == (int) a) {
+
+                                                                rang_2 = list_num[i - 1];
+
+                                                            }
+                                                            break;
+
+                                                        case 4:
+                                                            if (i == mitad_vec) {
+                                                                rang_1 = list_num[i - 1];
+                                                            } else {
+                                                                if (i == a) {
+                                                                    rang_2 = list_num[i - 1];
+                                                                }
+                                                            }
+                                                            break;
                                                     }
                                                 }
 
                                                 mediana_par = rang_1 + rang_2;
-                                                System.out.println(mediana_par);
+
                                                 mediana_par = mediana_par / 2;
                                                 System.out.println("la mediana es de " + mediana_par);
+                                                mediana_par = 0;
+                                                rang_1 = 0;
+                                                rang_2 = 0;
 
                                             } else {
-                                                for (int i = 0; i < list_num.length; i++) {
+                                                for (int i = 0; i <= list_num.length; i++) {
                                                     if (i == mitad_vec) {
                                                         System.out.println(
                                                                 "la mediana es: " + list_num[(int) mitad_vec]);
                                                     }
-
                                                 }
 
                                             }
@@ -835,6 +904,7 @@ public class Taller_1 {
                                             media = 0;
                                             for (int i = 0; i < list_num.length; i++) {
                                                 media = media + list_num[i];
+
                                             }
 
                                             media = media / num_max;
@@ -842,6 +912,25 @@ public class Taller_1 {
                                             System.out.println("la media de los datos dados es: " + (media));
 
                                             // moda
+                                            moda = 0;
+                                            contador2 = -1;
+
+                                            for (int i = 0; i < list_num.length; i++) {
+                                                contador = 0;
+                                                for (int j = 0; j < list_num.length; j++) {
+                                                    if (list_num[i] == list_num[j]) {
+                                                        contador = contador++;
+                                                    }
+                                                }
+                                                if (contador > contador2) {
+
+                                                    moda = list_num[i];
+                                                    contador2 = contador;
+
+                                                }
+
+                                            }
+                                            System.out.println("la moda es: " + moda);
 
                                             System.out.println("for");
 
