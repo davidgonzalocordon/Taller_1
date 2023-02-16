@@ -914,6 +914,8 @@ public class Taller_1 {
                                             // moda
                                             moda = 0;
                                             contador2 = -1;
+                                            contador3 = 0;
+                                            contador4 = 0;
 
                                             for (int i = 0; i < list_num.length; i++) {
                                                 contador = 0;
@@ -1267,6 +1269,365 @@ public class Taller_1 {
                             break;
 
                         case 3:
+                            String[] NomProductos = new String[23];
+                            int[] PrecioProductos = new int[23];
+                            int[] CantidadProductos = new int[23];
+                            System.out.println(
+                                    "3) Pedir nombres (23), precios que ud quiera y cantidad (del 1 al 23) y que con esos datos los impriman.");
+
+                            System.out.println("por favor insertar los nombres: ");
+
+                            for (int i = 0; i < NomProductos.length; i++) {
+                                System.out.println("");
+                                System.out.println("Nombre #" + (i + 1));
+                                NomProductos[i] = lector.nextLine();
+
+                            }
+
+                            System.out.println("");
+                            System.out.println("Por favor insertar los precios de cada producto: ");
+
+                            for (int i = 0; i < PrecioProductos.length; i++) {
+                                System.out.println("");
+                                System.out.print("valor del producto " + NomProductos[i] + ": ");
+                                PrecioProductos[i] = lector.nextInt();
+                            }
+
+                            System.out.println("");
+                            System.out.println("por favor insertar la cantidad que hay de cada producto: ");
+
+                            for (int i = 0; i < CantidadProductos.length; i++) {
+                                System.out.println("");
+                                System.out.print("cantidad de unidades de " + NomProductos[i] + ": ");
+                                CantidadProductos[i] = lector.nextInt();
+                            }
+
+                            System.out.println("");
+                            System.out.println("por favor escoja con cual bucle desea ver las multiplicaciones: ");
+                            System.out.println("1) do-while");
+                            System.out.println("2) while");
+                            System.out.println("3) for");
+                            System.out.println("4) for each");
+                            System.out.print("coloque el numero de la opción que va a escoger: ");
+
+                            Validar = lector.nextLine();
+                            if (Validar.matches("[1-4]")) {
+                                Seleccion_bucle = Integer.parseInt(Validar);
+                            } else {
+                                System.out.println("");
+                                while (!Validar.matches("[1-4]")) {
+                                    System.out.println("");
+                                    System.out.println("por favor escoja una respuesta de selección valida ");
+                                    System.out.println("1) do-while");
+                                    System.out.println("2) while");
+                                    System.out.println("3) for");
+                                    System.out.println("4) for each");
+                                    System.out.println("coloque el bucle que va a seleccionar es: ");
+                                    Validar = lector.nextLine();
+                                }
+                                Seleccion_bucle = Integer.parseInt(Validar);
+                            }
+                            System.out.println("");
+
+                            do {
+                                if (Seleccion_bucle <= 4 & Seleccion_bucle >= 1) {
+                                    switch (Seleccion_bucle) {
+                                        case 1: // do while
+                                            contador = 0;
+                                            System.out.println("productos que la tienda tiene: ");
+                                            do {
+                                                System.out.println("");
+                                                System.out.println(NomProductos[contador] + ": su valor es "
+                                                        + PrecioProductos[contador] + " y tenemos "
+                                                        + CantidadProductos[contador] + " unidades");
+                                                contador++;
+                                            } while (contador < CantidadProductos.length);
+
+                                            System.out.println("do while");
+
+                                            System.out.println("");
+                                            System.out.println("desea escoger otro bucle? ");
+                                            System.out.println("1) si 2) no ");
+                                            Validar = lector.nextLine();
+                                            if (Validar.matches("[1-2]")) {
+                                                Seleccion_bucle = Integer.parseInt(Validar);
+                                            } else {
+                                                System.out.println("");
+                                                while (!Validar.matches("[1-2]")) {
+                                                    System.out.println("");
+                                                    System.out.println(
+                                                            "por favor escoja una respuesta de selección valida ");
+                                                    System.out.println("1) si 2) no ");
+                                                    System.out.println("coloque el numero de acuerdo a su decision: ");
+                                                    Validar = lector.nextLine();
+                                                }
+                                                Seleccion_bucle = Integer.parseInt(Validar);
+                                            }
+
+                                            if (Seleccion_bucle == 1) {
+                                                System.out.println("");
+                                                System.out.println(
+                                                        "por favor escoja con cual bucle desea ver las multiplicaciones: ");
+                                                System.out.println("1) repetir do-while");
+                                                System.out.println("2) while");
+                                                System.out.println("3) for");
+                                                System.out.println("4) for each");
+                                                System.out
+                                                        .print("coloque el numero de la opción que va a escoger: ");
+                                                Validar = lector.nextLine();
+
+                                                if (Validar.matches("[1-4]")) {
+                                                    Seleccion_bucle = Integer.parseInt(Validar);
+                                                } else {
+                                                    System.out.println("");
+                                                    while (!Validar.matches("[1-4]")) {
+                                                        System.out.println("");
+                                                        System.out.println(
+                                                                "por favor escoja una respuesta de selección valida ");
+                                                        System.out.println("1) repetir do-while");
+                                                        System.out.println("2) while");
+                                                        System.out.println("3) for");
+                                                        System.out.println("4) for each");
+                                                        System.out
+                                                                .println("coloque el bucle que va a seleccionar es: ");
+                                                        Validar = lector.nextLine();
+                                                    }
+                                                    Seleccion_bucle = Integer.parseInt(Validar);
+                                                }
+
+                                                repite_seleccion_bucle = true;
+                                            } else {
+                                                System.out.println(
+                                                        "okey muchas gracias por haver visto este punto");
+                                                repite_seleccion_bucle = false;
+                                                repite_seleccion_punto = true;
+                                            }
+
+                                            break;
+                                        case 2: // while
+                                            contador = 0;
+                                            System.out.println("productos que la tienda tiene: ");
+
+                                            while (contador < NomProductos.length) {
+                                                System.out.println("");
+                                                System.out.println(NomProductos[contador] + ": su valor es "
+                                                        + PrecioProductos[contador] + " y tenemos "
+                                                        + CantidadProductos[contador] + " unidades");
+                                                contador++;
+                                            }
+
+                                            System.out.println("while");
+
+                                            System.out.println("");
+                                            System.out.println("desea escoger otro bucle? ");
+                                            System.out.println("1) si 2) no ");
+                                            Validar = lector.nextLine();
+                                            if (Validar.matches("[1-2]")) {
+                                                Seleccion_bucle = Integer.parseInt(Validar);
+                                            } else {
+                                                System.out.println("");
+                                                while (!Validar.matches("[1-2]")) {
+                                                    System.out.println("");
+                                                    System.out.println(
+                                                            "por favor escoja una respuesta de selección valida ");
+                                                    System.out.println("1) si 2) no ");
+                                                    System.out.println("coloque el numero de acuerdo a su decision: ");
+                                                    Validar = lector.nextLine();
+                                                }
+                                                Seleccion_bucle = Integer.parseInt(Validar);
+                                            }
+
+                                            if (Seleccion_bucle == 1) {
+                                                System.out.println("");
+                                                System.out.println(
+                                                        "por favor escoja con cual bucle desea ver las multiplicaciones: ");
+                                                System.out.println("1) do-while");
+                                                System.out.println("2) repetir while");
+                                                System.out.println("3) for");
+                                                System.out.println("4) for each");
+                                                System.out
+                                                        .print("coloque el numero de la opción que va a escoger: ");
+                                                Validar = lector.nextLine();
+
+                                                if (Validar.matches("[1-4]")) {
+                                                    Seleccion_bucle = Integer.parseInt(Validar);
+                                                } else {
+                                                    System.out.println("");
+                                                    while (!Validar.matches("[1-4]")) {
+                                                        System.out.println("");
+                                                        System.out.println(
+                                                                "por favor escoja una respuesta de selección valida ");
+                                                        System.out.println("1) do-while");
+                                                        System.out.println("2) repetir while");
+                                                        System.out.println("3) for");
+                                                        System.out.println("4) for each");
+                                                        System.out
+                                                                .println("coloque el bucle que va a seleccionar es: ");
+                                                        Validar = lector.nextLine();
+                                                    }
+                                                    Seleccion_bucle = Integer.parseInt(Validar);
+                                                }
+
+                                                repite_seleccion_bucle = true;
+                                            } else {
+                                                System.out.println(
+                                                        "okey muchas gracias por haver visto este punto");
+                                                repite_seleccion_bucle = false;
+                                                repite_seleccion_punto = true;
+                                            }
+
+                                            break;
+                                        case 3:// for
+
+                                            for (int i = 0; i < NomProductos.length; i++) {
+                                                System.out.println("");
+                                                System.out.println(NomProductos[i] + ": su valor es "
+                                                        + PrecioProductos[i] + " y tenemos "
+                                                        + CantidadProductos[i] + " unidades");
+                                            }
+
+                                            System.out.println("for");
+
+                                            System.out.println("");
+                                            System.out.println("desea escoger otro bucle? ");
+                                            System.out.println("1) si 2) no ");
+                                            Validar = lector.nextLine();
+                                            if (Validar.matches("[1-2]")) {
+                                                Seleccion_bucle = Integer.parseInt(Validar);
+                                            } else {
+                                                System.out.println("");
+                                                while (!Validar.matches("[1-2]")) {
+                                                    System.out.println("");
+                                                    System.out.println(
+                                                            "por favor escoja una respuesta de selección valida ");
+                                                    System.out.println("1) si 2) no ");
+                                                    System.out.println("coloque el numero de acuerdo a su decision: ");
+                                                    Validar = lector.nextLine();
+                                                }
+                                                Seleccion_bucle = Integer.parseInt(Validar);
+                                            }
+
+                                            if (Seleccion_bucle == 1) {
+                                                System.out.println("");
+                                                System.out.println(
+                                                        "por favor escoja con cual bucle desea ver las multiplicaciones: ");
+                                                System.out.println("1) do-while");
+                                                System.out.println("2) while");
+                                                System.out.println("3) repetir for");
+                                                System.out.println("4) for each");
+                                                System.out
+                                                        .print("coloque el numero de la opción que va a escoger: ");
+                                                Validar = lector.nextLine();
+                                                if (Validar.matches("[1-4]")) {
+                                                    Seleccion_bucle = Integer.parseInt(Validar);
+                                                } else {
+                                                    System.out.println("");
+                                                    while (!Validar.matches("[1-4]")) {
+                                                        System.out.println("");
+                                                        System.out.println(
+                                                                "por favor escoja una respuesta de selección valida ");
+                                                        System.out.println("1) do-while");
+                                                        System.out.println("2) while");
+                                                        System.out.println("3) repetir for");
+                                                        System.out.println("4) for each");
+                                                        System.out.println(
+                                                                "coloque el numero de acuerdo a su decision: ");
+                                                        Validar = lector.nextLine();
+                                                    }
+                                                    Seleccion_bucle = Integer.parseInt(Validar);
+                                                }
+
+                                                repite_seleccion_bucle = true;
+                                            } else {
+                                                System.out.println(
+                                                        "okey muchas gracias por haver visto este punto");
+                                                repite_seleccion_bucle = false;
+                                                repite_seleccion_punto = true;
+                                            }
+                                            break;
+                                        case 4:// foreach
+
+                                            for (int i : PrecioProductos) {
+                                                System.out.println("");
+                                                System.out.println(NomProductos[i] + ": su valor es "
+                                                        + PrecioProductos[i] + " y tenemos "
+                                                        + CantidadProductos[i] + " unidades");
+                                            }
+
+                                            System.out.println("foreach");
+
+                                            System.out.println("");
+                                            System.out.println("desea escoger otro bucle? ");
+                                            System.out.println("1) si 2) no ");
+                                            Validar = lector.nextLine();
+                                            if (Validar.matches("[1-2]")) {
+                                                Seleccion_bucle = Integer.parseInt(Validar);
+                                            } else {
+                                                System.out.println("");
+                                                while (!Validar.matches("[1-2]")) {
+                                                    System.out.println("");
+                                                    System.out.println(
+                                                            "por favor escoja una respuesta de selección valida ");
+                                                    System.out.println("1) si 2) no ");
+                                                    System.out.println("coloque el numero de acuerdo a su decision: ");
+                                                    Validar = lector.nextLine();
+                                                }
+                                                Seleccion_bucle = Integer.parseInt(Validar);
+                                            }
+
+                                            if (Seleccion_bucle == 1) {
+                                                System.out.println("");
+                                                System.out.println(
+                                                        "por favor escoja con cual bucle desea ver las multiplicaciones: ");
+                                                System.out.println("1) do-while");
+                                                System.out.println("2) while");
+                                                System.out.println("3) for");
+                                                System.out.println("4) repetir foreach");
+                                                System.out
+                                                        .print("coloque el numero de la opción que va a escoger: ");
+                                                Validar = lector.nextLine();
+                                                if (Validar.matches("[1-4]")) {
+                                                    Seleccion_bucle = Integer.parseInt(Validar);
+                                                } else {
+                                                    System.out.println("");
+                                                    while (!Validar.matches("[1-4]")) {
+                                                        System.out.println("");
+                                                        System.out.println(
+                                                                "por favor escoja una respuesta de selección valida ");
+                                                        System.out.println("1) do-while");
+                                                        System.out.println("2) while");
+                                                        System.out.println("3) for");
+                                                        System.out.println("4) repetir for each");
+                                                        System.out.println(
+                                                                "coloque el numero de acuerdo a su decision: ");
+                                                        Validar = lector.nextLine();
+                                                    }
+                                                    Seleccion_bucle = Integer.parseInt(Validar);
+                                                }
+
+                                                repite_seleccion_bucle = true;
+                                            } else {
+                                                System.out.println(
+                                                        "okey muchas gracias por haver visto este punto");
+                                                repite_seleccion_bucle = false;
+                                                repite_seleccion_punto = true;
+                                            }
+
+                                            break;
+                                    }
+                                } else {
+                                    System.out.println("");
+                                    System.out.println(
+                                            "profe por favor rinda se con el tema de intentar tumbarme el código con la cuestión de colocar un numero de opción que no se pude ");
+                                    System.out.println("1) do-while");
+                                    System.out.println("2) while");
+                                    System.out.println("3) for");
+                                    System.out.println("4) for each");
+                                    System.out.print("coloque el numero de la opción que va a escoger: ");
+                                    Seleccion_bucle = lector.nextInt();
+                                }
+                            } while (repite_seleccion_bucle == true);
+
                             System.out.println("punto 3");
                             System.out.println("");
                             System.out.println("desea escoger otro punto del taller??");
