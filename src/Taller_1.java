@@ -485,7 +485,7 @@ public class Taller_1 {
 
                             int num_max = (int) (Math.random() * 4 + 1);
                             int[] list_num = new int[num_max];
-                            int datosP2, rang_1, rang_2, moda, contador3, contador4;
+                            int rang_1, rang_2, moda, contador3, contador4;
                             double mediana_par;
                             rang_1 = 0;
                             rang_2 = 0;
