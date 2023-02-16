@@ -618,7 +618,7 @@ public class Taller_1 {
                                                         contador = contador++;
                                                     }
                                                     contador4++;
-                                                } while (contador4 >= list_num.length);
+                                                } while (contador4 > list_num.length);
 
                                                 if (contador > contador2) {
 
@@ -1052,6 +1052,31 @@ public class Taller_1 {
                                             System.out.println("la media de los datos dados es: " + (media));
 
                                             // moda
+
+                                            moda = 0;
+                                            contador2 = -1;
+                                            contador3 = 0;
+                                            contador4 = 0;
+                                            for (int i : list_num) {
+                                                contador = 0;
+                                                contador3 = i;
+                                                for (int j : list_num) {
+                                                    contador4 = j;
+                                                    if (list_num[contador3] == list_num[contador4]) {
+                                                        contador = contador++;
+                                                    }
+
+                                                }
+
+                                                if (contador > contador2) {
+
+                                                    moda = list_num[contador3];
+                                                    contador2 = contador;
+
+                                                }
+                                            }
+
+                                            System.out.println("la moda es: " + moda);
 
                                             System.out.println("foreach");
 
